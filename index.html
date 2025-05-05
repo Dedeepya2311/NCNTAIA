@@ -818,6 +818,85 @@
             padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
+
+        /* Call for Papers Section */
+        .call-for-papers {
+            padding: 80px 0;
+            background-color: var(--white);
+            position: relative;
+            z-index: 10;
+        }
+
+        .cfp-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .cfp-text {
+            flex: 1;
+        }
+
+        .cfp-text h3 {
+            color: var(--clay);
+            margin: 20px 0 15px;
+            font-size: 1.4rem;
+        }
+
+        .cfp-text ul {
+            list-style-position: inside;
+            margin: 15px 0;
+        }
+
+        .cfp-text li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .cfp-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .cfp-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .cfp-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .cfp-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .cfp-content {
+                flex-direction: column;
+            }
+            
+            .cfp-image {
+                margin-top: 30px;
+                max-width: 100%;
+            }
+            
+            .cfp-buttons {
+                flex-direction: column;
+            }
+            
+            .cfp-buttons .btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
         
         /* Responsive Styles */
         @media (max-width: 992px) {
@@ -914,6 +993,24 @@
                 font-size: 0.9rem;
             }
         }
+                /* Add this to your existing CSS */
+        nav ul {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            gap: 10px;
+        }
+
+        @media (max-width: 992px) {
+            nav ul {
+                grid-template-columns: repeat(2, auto);
+            }
+        }
+
+        @media (max-width: 576px) {
+            nav ul {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -933,17 +1030,20 @@
         <div class="container">
             <div class="main-header">
                 <div class="logo">
-                    <img src="https://sreenidhi.edu.in/wp-content/uploads/2022/07/Sreenidhi-logo@2x.png" alt="" style="height: 65px; width: 150px;">
-                    <div class="logo-text">
-                        <h1>NCNTAIA 2025</h1>
-                        <p>National Conference on Next-Gen Technologies in AI Applications</p>
-                    </div>
+                    <img src="https://sreenidhi.edu.in/wp-content/uploads/2022/07/Sreenidhi-logo@2x.png" alt="SNIST Logo" style="height: 65px; width: auto; margin-right: 0px;">
+                    <!-- <img src="https://upload.wikimedia.org/wikipedia/en/5/52/National_Institutional_Ranking_Framework_logo.png" alt="NIRF logo" style="height: 50px; width: auto;">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgiqHbF7t-rNsmnMo7xU2SOdtzYfMInQ-i0Vhp-1GAKr8W_is0" alt="NAAC logo" style="height: 50px; width: auto;">
+                    <img src="https://www.malabarcet.ac.in/wp-content/uploads/2024/03/nba.png" alt="NBA logo" style="height: 50px; width: auto;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/4e/UGC_India_Logo.png" alt="UGC logo" style="height: 50px; width: auto;">
+                    <img src="https://static.wixstatic.com/media/752ed1_832f464e3d004784b8eec5efd0c57aaf~mv2.png/v1/fill/w_780,h_439,al_c,q_85,enc_avif,quality_auto/752ed1_832f464e3d004784b8eec5efd0c57aaf~mv2.png" alt="TEQIP logo" style="height: 50px; width: auto;"> -->
+                    <img src="https://sreenidhi.edu.in/wp-content/uploads/2020/09/logo-strip.jpg" alt="logo" style="height: 50px; width: auto;">
                 </div>
                 <nav>
                     <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#call-for-papers">Call for Papers</a></li>
                         <li><a href="#tracks">Tracks</a></li>
                         <li><a href="#speakers">Speakers</a></li>
                         <li><a href="#dates">Dates</a></li>
@@ -985,6 +1085,40 @@
             </div>
         </div>
     </section>
+
+
+
+   <!-- Call for Papers Section -->
+<section class="call-for-papers" id="call-for-papers">
+    <div class="container">
+        <div class="section-title">
+            <h2>Call for Papers</h2>
+        </div>
+        <div class="cfp-content">
+            <div class="cfp-text">
+                <h3>Submission Guidelines</h3>
+                <p>We invite researchers, academicians, and industry professionals to submit original, unpublished research papers on topics related to Artificial Intelligence and its applications. All submissions will be peer-reviewed by an expert committee.</p>
+                
+                <h3>Important Information</h3>
+                <ul>
+                    <li>Papers should be in IEEE format (max 6 pages)</li>
+                    <li>Submissions must be in PDF format</li>
+                    <li>All papers will undergo plagiarism check</li>
+                    <li>Accepted papers will be published in conference proceedings</li>
+                    <li>Selected papers may be considered for publication in Scopus-indexed journals</li>
+                </ul>
+                
+                <div class="cfp-buttons">
+                    <a href="#" class="btn">Download Template</a>
+                    <a href="#" class="btn">Submission Portal</a>
+                </div>
+            </div>
+            <div class="cfp-image">
+                <img src="..." alt="Call for Papers">
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Objectives Section -->
     <section class="objectives">
@@ -1460,7 +1594,7 @@
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>ncntabc2025@gmail.com</p>
+                                <p>ncntaia-2025@sreenidhi.edu.in</p>
                                 <p>mamatha.t@sreenidhi.edu.in</p>
                             </div>
                         </div>
