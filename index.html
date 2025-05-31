@@ -404,6 +404,46 @@
             font-weight: 600;
             margin-bottom: 15px;
         }
+        /* Keynote speaker card adjustments */
+.speakers-grid .speaker-card {
+    width: 100%; /* Make cards take full width of grid cell */
+    max-width: 350px; /* Set a maximum width */
+    margin: 0 auto; /* Center the cards */
+}
+
+.speakers-grid .speaker-image {
+    height: 300px; /* Increase height for keynote speakers */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.speakers-grid .speaker-image img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adjust grid layout for keynote speakers */
+.speakers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .speakers-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .speakers-grid .speaker-image {
+        height: 280px;
+    }
+}
         
         /* Important Dates Section */
         .dates {
