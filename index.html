@@ -738,7 +738,46 @@
             color: var(--dark-brown);
             margin-bottom: 5px;
         }
-        
+        /* Detailed Guidelines Styling */
+        .detailed-guidelines {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--clay);
+        }
+
+        .detailed-guidelines h4 {
+            color: var(--clay);
+            margin: 15px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .detailed-guidelines ul {
+            padding-left: 20px;
+        }
+
+        .detailed-guidelines li {
+            margin-bottom: 8px;
+        }
+
+        /* Email Submission Box */
+        .email-submission-box {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .email-submit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .email-note {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
         /* Sponsors Section */
         /*.sponsors {
             padding: 80px 0;
@@ -1418,15 +1457,43 @@
                 <h3>Submission Guidelines</h3>
                 <p>We invite researchers, academicians, and industry professionals to submit original, unpublished research papers on topics related to Artificial Intelligence and its applications. All submissions will be peer-reviewed by an expert committee.</p>
                 
+                <!-- Added Detailed Submission Guidelines -->
+                <div class="detailed-guidelines">
+                    <h4>Abstract Submission</h4>
+                    <ul>
+                        <li>Submit in prescribed format with Title, Author names, Affiliations, and Email IDs</li>
+                        <li>1 page length in Times New Roman (PDF format)</li>
+                        <li>Email abstracts to: <strong>ncntaia-2025@sreenidhi.edu.in</strong></li>
+                    </ul>
+                    
+                    <h4>Full Paper Submission</h4>
+                    <ul>
+                        <li>IEEE format (max 6+2 pages including references)</li>
+                        <li>Extra pages charged at ₹250 per page</li>
+                        <li>Email final papers to: <strong>ncntaia-2025@sreenidhi.edu.in</strong></li>
+                    </ul>
+                    
+                    <h4>Plagiarism Policy</h4>
+                    <p>All submissions must be original work. Plagiarism checks will be performed.</p>
+                </div>
+                <!-- End of Added Content -->
+
                 <h3>Important Information</h3>
                 <ul>
-                    <li>Papers should be in IEEE format (max 6 pages)</li>
-                    <li>Submissions must be in PDF format</li>
-                    <li>All papers will undergo plagiarism check</li>
-                    <li>Accepted papers will be published in conference proceedings</li>
-                    <li>Selected papers may be considered for publication in Scopus-indexed journals</li>
+                    <li>Proceedings with abstracts released on conference opening day</li>
+                    <li>Selected papers peer-reviewed for Scopus/WoS indexed journals</li>
+                    <li>Poster presentation opportunities for selected abstracts</li>
+                    <li>Best paper awards for outstanding research</li>
                 </ul>
                 
+                <div class="email-submission-box">
+                    <a href="mailto:ncntaia-2025@sreenidhi.edu.in?subject=NCNTAIA%202025%20Submission&body=Submission%20Type:%20[Abstract/Full%20Paper]%0ATitle:%0AAuthors:%0AAffiliations:%0A" 
+                       class="btn email-submit-btn">
+                        <i class="fas fa-paper-plane"></i> Submit via Email
+                    </a>
+                    <p class="email-note">All submissions to: ncntaia-2025@sreenidhi.edu.in</p>
+                </div>
+
                 <div class="cfp-buttons">
                     <a href="#" class="btn">Download Template</a>
                     <a href="#" class="btn">Submission Portal</a>
@@ -1627,7 +1694,7 @@
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <h3>Notification of Acceptance</h3>
-                        <p>July 30, 2025</p>
+                        <p>August 14, 2025</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
